@@ -1,0 +1,17 @@
+
+
+###
+POST http://localhost:8081/accounts
+Content-Type: application/json
+
+{
+  "accountNumber": {"value": "12345"},
+  "balance": {"amount":  115, "currency": "SGD"}
+}
+
+###
+
+GET http://localhost:8081/accounts/12345
+Accept: application/json
+
+###
