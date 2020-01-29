@@ -1,0 +1,10 @@
+POST http://localhost:8083/transactions/withdrawals
+Content-Type: application/json
+
+{
+  "bankAccountNumber":  "12345",
+  "amount":{"amount":  50.00, "currency": "SGD" },
+  "tellerId": {"value":  "T2309"}
+}
+
+###

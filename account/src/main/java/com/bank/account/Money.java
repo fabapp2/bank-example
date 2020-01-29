@@ -26,7 +26,7 @@ public class Money {
 
     public void substract(Money money) {
         if(currency.equals(money.getCurrency())) {
-            this.amount.subtract(money.getAmount());
+            this.amount = this.amount.subtract(money.getAmount());
         } else {
             throw new InvalidCurrencyException(String.format("Failed to substract %s from money in %s.", money.getCurrency(), currency ));
         }
@@ -34,7 +34,7 @@ public class Money {
 
     public void add(Money money) {
         if(currency.equals(money.getCurrency())) {
-            this.amount.add(money.getAmount());
+            this.amount = this.amount.add(money.getAmount());
         } else {
             throw new InvalidCurrencyException(String.format("Failed to add %s to money in %s.", money.getCurrency(), currency ));
         }
