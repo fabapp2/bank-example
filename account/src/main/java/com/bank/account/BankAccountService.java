@@ -1,8 +1,10 @@
 package com.bank.account;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 class BankAccountService {
@@ -26,6 +28,8 @@ class BankAccountService {
         } else {
             // FIXME: throw exception in case of unknown transaction type
         }
-        return bankAccountRepository.save(bankAccount);
+        final BankAccount savedBankAccount = bankAccountRepository.save(bankAccount);
+        log.info("Created new BankAccount {}", savedBankAccount.getAccountNumber());
+        return savedBankAccount;
     }
 }

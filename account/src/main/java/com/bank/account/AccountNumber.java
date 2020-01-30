@@ -13,6 +13,5 @@ import java.io.Serializable;
 @Getter
 @Setter
 class AccountNumber implements Serializable {
-    @Column(name = "accountNumber")
     private String value;
 }

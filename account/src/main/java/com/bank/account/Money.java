@@ -16,7 +16,7 @@ import java.util.Currency;
 @Getter
 @Setter
 public class Money {
-    @Column(name = "balance")
+
     private BigDecimal amount;
     private Currency currency;
 

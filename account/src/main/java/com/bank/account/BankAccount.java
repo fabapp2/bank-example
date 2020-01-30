@@ -16,9 +16,10 @@ public class BankAccount {
     private Long id;
 
     @Embedded
-    @Column(nullable = false, unique = true)
+    @AttributeOverride(name = "value", column = @Column(name = "accountNumber", nullable = false, unique = true))
     private AccountNumber accountNumber;
 
+    @AttributeOverride(name = "amount", column = @Column(name = "balance"))
     private Money balance;
 
     public Money withdrawal(Money amount) {
