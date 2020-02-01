@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import java.util.Currency;
 
 @Entity
 @Getter
@@ -19,8 +19,7 @@ public class BankAccount {
     @AttributeOverride(name = "value", column = @Column(name = "accountNumber", nullable = false, unique = true))
     private AccountNumber accountNumber;
 
-    @AttributeOverride(name = "amount", column = @Column(name = "balance"))
-    private Money balance;
+    private Money balance = new Money(0, Currency.getInstance("SGD"));
 
     public Money withdrawal(Money amount) {
         try {

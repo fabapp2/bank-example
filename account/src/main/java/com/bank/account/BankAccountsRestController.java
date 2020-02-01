@@ -29,7 +29,7 @@ public class BankAccountsRestController {
    @PostMapping("/accounts/{accountNumber}/transactions")
    public HttpEntity<BankAccount> transactAccount(@PathParam("accountNumber") AccountNumber accountNumber, @RequestBody AccountTransaction accountTransaction) {
        final BankAccount bankAccount = bankAccountService.transactAccount(accountNumber, accountTransaction);
-       HttpEntity<BankAccount> bankAccountResponse = new ResponseEntity<>(bankAccount, HttpStatus.ACCEPTED);
+       HttpEntity<BankAccount> bankAccountResponse = new ResponseEntity<>(bankAccount, HttpStatus.CREATED);
        return bankAccountResponse;
    }
 

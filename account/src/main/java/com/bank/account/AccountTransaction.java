@@ -6,10 +6,13 @@ import lombok.Setter;
 @Setter
 @Getter
 public class AccountTransaction {
-    public enum Type  {
-        WITHDRAWAL, DEPOSIT;
+
+    public enum Type {
+        WITHDRAWAL, DEPOSIT
     }
 
     private Type type;
+
     private Money amount;
+
 }

@@ -1,0 +1,17 @@
+
+
+###
+POST http://account.cfapps.io/accounts
+Content-Type: application/json
+
+{
+  "accountNumber": {"value": "12345"},
+  "balance": {"amount":  115, "currency": "SGD"}
+}
+
+###
+
+GET http://account.cfapps.io/accounts/12345
+Accept: application/json
+
+###
