@@ -15,7 +15,7 @@
     </parent>
     <groupId>com.bank</groupId>
     <artifactId>bank</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>bank</name>
     <description>Demo project</description>
 
@@ -68,7 +68,7 @@
 
     <scm>
         <connection>scm:git:git@github.com:fabapp2/bank-example.git</connection>
-        <url>https://github.com/fabapp2/bank-example.git</url>
+        <url>scm:git:git@github.com:fabapp2/bank-example.git</url>
         <developerConnection>scm:git:git@github.com:fabapp2/bank-example.git</developerConnection>
         <tag>v0.0.2</tag>
     </scm>
