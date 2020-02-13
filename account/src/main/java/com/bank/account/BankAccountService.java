@@ -16,6 +16,9 @@ class BankAccountService {
     }
 
     public BankAccount createBankAccount(BankAccount bankAccount) {
+        if(bankAccountRepository.existsByAccountNumber(bankAccount.getAccountNumber())) {
+            throw new BankAccountAlreadyExistsException(String.format("Bank account with accountNumber %s already exists", bankAccount.getAccountNumber()));
+        }
         return bankAccountRepository.save(bankAccount);
     }
 

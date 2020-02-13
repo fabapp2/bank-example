@@ -7,4 +7,6 @@ import org.springframework.data.repository.query.Param;
 public interface BankAccountRepository extends JpaRepository<BankAccount, Long> {
     @Query("select ba from BankAccount ba where ba.accountNumber = :accountNumber")
     BankAccount getByAccountNumber(@Param("accountNumber") AccountNumber accountNumber);
+
+    boolean existsByAccountNumber(AccountNumber accountNumber);
 }
