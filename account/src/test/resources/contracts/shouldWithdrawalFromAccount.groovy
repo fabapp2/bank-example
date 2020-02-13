@@ -31,6 +31,9 @@ Contract.make {
                   }
         }
         ''')
+        headers {
+            contentType(applicationJson())
+        }
         status 201
     }
 }
