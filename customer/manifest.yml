@@ -1,0 +1,7 @@
+---
+applications:
+  - name: customer
+    path: target/customer-0.0.1-SNAPSHOT.jar
+    random-route: false
+    routes:
+        - route: banking-customer.cfapps.io

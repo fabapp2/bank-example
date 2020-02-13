@@ -1,3 +1,16 @@
+# The Bank
+
+This project acts as playground for myself to look into different spring modules and other aspects.
+
+# Artifactory
+
+Run local Artifdactory using Docker: +
+`docker run -d -p 8081:8081 --name nexus sonatype/nexus3`
+
+
+
+
 # Resources
 
 https://spring.io/projects/spring-cloud-sleuth[Sprig Cloud Sleuth Documentation]
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-metrics[Spring Boot Metrics with Micrometer]
