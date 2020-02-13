@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
@@ -12,11 +11,11 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.4.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath /> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.bank</groupId>
     <artifactId>bank</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>bank</name>
     <description>Demo project</description>
 
@@ -58,7 +57,7 @@
                         </executions>
                         <configuration>
                             <serverId>nexus-releases</serverId>
-                            <nexusUrl>http://localhost:8081</nexusUrl>
+                            <nexusUrl>http://localhost:8081/</nexusUrl>
                             <skipStaging>true</skipStaging>
                         </configuration>
                     </plugin>
@@ -71,6 +70,7 @@
         <connection>scm:git:https://github.com/fabapp2/bank-example.git</connection>
         <url>https://github.com/fabapp2/bank-example.git</url>
         <developerConnection>scm:git:https://github.com/fabapp2/bank-example.git</developerConnection>
+        <tag>v0.0.2</tag>
     </scm>
 
     <distributionManagement>
@@ -101,7 +101,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.4.2</version>
+                <version>3.0.0-M1</version>
                 <configuration>
                     <tagNameFormat>v@{project.version}</tagNameFormat>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
@@ -115,7 +115,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <!-- The Base URL of Nexus instance where we want to stage -->
-                    <nexusUrl>http://localhost:8081/</nexusUrl>
+                    <nexusUrl>http://localhost:8081/repository/maven-snapshots/</nexusUrl>
                     <!-- The server "id" element from settings to use authentication from -->
                     <serverId>local-nexus</serverId>
                 </configuration>
