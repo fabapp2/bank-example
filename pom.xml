@@ -15,7 +15,7 @@
     </parent>
     <groupId>com.bank</groupId>
     <artifactId>bank</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>bank</name>
     <description>Demo project</description>
 
