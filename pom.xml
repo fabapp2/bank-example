@@ -67,9 +67,9 @@
     </profiles>
 
     <scm>
-        <connection>scm:git:https://github.com/fabapp2/bank-example.git</connection>
+        <connection>scm:git:git@github.com:fabapp2/bank-example.git</connection>
         <url>https://github.com/fabapp2/bank-example.git</url>
-        <developerConnection>scm:git:https://github.com/fabapp2/bank-example.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:fabapp2/bank-example.git</developerConnection>
         <tag>v0.0.2</tag>
     </scm>
 

@@ -31,3 +31,8 @@ build/
 .vscode/
 /account/release.properties
 /zipkin.jar
+/account/pom.xml.releaseBackup
+/release.properties
+/pom.xml.releaseBackup
+/customer/pom.xml.releaseBackup
+/banking-transaction/pom.xml.releaseBackup
