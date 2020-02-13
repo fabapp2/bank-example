@@ -3,6 +3,7 @@ package com.bank.account;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +27,7 @@ public class BankAccountsRestController {
         return bankAccountResponse;
     }
 
-   @PostMapping("/accounts/{accountNumber}/transactions")
+   @PostMapping(value = "/accounts/{accountNumber}/transactions", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
    public HttpEntity<BankAccount> transactAccount(@PathParam("accountNumber") AccountNumber accountNumber, @RequestBody AccountTransaction accountTransaction) {
        final BankAccount bankAccount = bankAccountService.transactAccount(accountNumber, accountTransaction);
        HttpEntity<BankAccount> bankAccountResponse = new ResponseEntity<>(bankAccount, HttpStatus.CREATED);
