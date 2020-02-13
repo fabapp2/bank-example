@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 @AutoConfigureStubRunner(
         stubsMode = StubRunnerProperties.StubsMode.LOCAL,
-        ids = "com.bank:account:0.0.1-SNAPSHOT:stubs:8888"
+        ids = "com.bank:account:0.0.1:stubs:8888"
 )
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         properties = {

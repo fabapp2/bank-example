@@ -11,7 +11,7 @@ public class BankingTransactionService {
     private final BankingTransactionSequenceService bankingTransactionSequenceService;
     private final BankingTransactionRepository bankingTransactionRepository;
 
-    public BankingTransaction withdrwal(BankingTransaction bankingTransaction) {
+    public BankingTransaction withdrawal(BankingTransaction bankingTransaction) {
         TellerId tellerId = bankingTransaction.getTellerId();
         TransactionSequence transactionSequence = bankingTransactionSequenceService.createWithdrawalTransactionSequence(tellerId);
         bankingTransaction.setTransactionSequence(transactionSequence);
