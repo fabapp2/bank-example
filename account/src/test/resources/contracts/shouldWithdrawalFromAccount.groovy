@@ -16,7 +16,6 @@ Contract.make {
             }
         '''
         headers {
-            header 'foo': 'bar'
             contentType(applicationJson())
         }
     }
